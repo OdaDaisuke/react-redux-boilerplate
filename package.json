@@ -38,7 +38,6 @@
     "@types/redux": "^3.6.0",
     "bind-decorator": "^1.0.11",
     "dotenv-webpack": "^1.5.5",
-    "mobx-react": "^5.1.2",
     "react-hot-loader": "^4.0.0",
     "react-router-redux": "^4.0.8"
   }
