@@ -3,6 +3,7 @@
 Implements DDD.
 
 - TypeScript
+- Aphrodite(css styling)
 - webpack
 - BrowserSync
 
