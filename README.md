@@ -1,5 +1,11 @@
 ## React+Redux boilerplate
 
+Implements DDD.
+
+- TypeScript
+- webpack
+- BrowserSync
+
 ### Usage
 
 ```
