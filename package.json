@@ -1,0 +1,45 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "clean:assets": "rm -rf public/assets/",
+    "copy:assets": "cp -R assets/ public/assets/",
+    "configure": "tsc webpack.config.ts",
+    "start": "npm run configure && npm run copy:assets && webpack-dev-server --no-inline --watch --port=3131 --mode=development",
+    "build:dev": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=development webpack",
+    "build:prod": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-dom": "^4.2.5",
+    "aphrodite": "^2.1.0",
+    "axios": "^0.18.0",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/react-redux": "^6.0.0",
+    "@types/react-router-redux": "^5.0.14",
+    "@types/redux": "^3.6.0",
+    "bind-decorator": "^1.0.11",
+    "dotenv-webpack": "^1.5.5",
+    "mobx-react": "^5.1.2",
+    "react-hot-loader": "^4.0.0",
+    "react-router-redux": "^4.0.8"
+  }
+}
