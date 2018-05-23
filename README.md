@@ -6,6 +6,10 @@ Implements DDD.
 - webpack
 - BrowserSync
 
+### Design system.
+
+AtomicDesign.
+
 ### Usage
 
 ```
