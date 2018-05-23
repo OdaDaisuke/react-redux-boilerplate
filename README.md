@@ -33,8 +33,8 @@ $ yarn start
   | - stores/ -> Reducer stores.
   | - view/
         |
-	| - atoms/ Atomic design A layer.
-	| - molecules/ Atomic design M layer.
+	| - atoms/ -> Atomic design A layer.
+	| - molecules/ -> Atomic design M layer.
 	| - organisms/ -> Atomic design O layer.
 	| - pages/ -> Containers.
 ```
