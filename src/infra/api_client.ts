@@ -1,7 +1,5 @@
 import axios from 'axios'
-
-const API_BASE_URI = 'http://localhost:8888/api/v1'
-const SAMPLE_API_URI = 'https://jsonplaceholder.typicode.com/users'
+import * as configs from '../configs'
 
 // axiosのオプションを返す
 interface reqOpProps {
@@ -14,21 +12,18 @@ interface reqOpProps {
 
 // ------------------------------- //
 
-interface APIClientProps {
-}
-
 interface reqOption {
   endpoint: string, // endpoint url
   callback: any // callback func
   params?: any, // parameter
 }
 
-export class APIClient<APIClientProps> {
+export class APIClient {
   private static getReqOption(option: reqOpProps) {
     return {
       method: option.method,
-      // url: API_BASE_URI + option.endpoint,
-      url: SAMPLE_API_URI,
+      // url: configs.env.apiBaseUri + option.endpoint,
+      url: "https://jsonplaceholder.typicode.com/users",
       data: option.data,
       params: option.params
     }
