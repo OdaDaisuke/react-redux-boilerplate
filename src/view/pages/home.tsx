@@ -3,15 +3,19 @@ import { css, StyleSheet } from 'aphrodite'
 import { bind } from 'bind-decorator'
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
+import { SampleService } from '../../domain'
 import * as actions from '../../actions'
 import { Sentence, Button } from '../atoms'
 
-export interface HomeProps {
-  actions: any
+export interface IHomeProps {
+  actions: {
+    onAppInit: any
+  }
   state: any
+  sampleService: SampleService
 }
 
-class Home extends React.Component<HomeProps, any> {
+class Home extends React.Component<IHomeProps, any> {
   render(): JSX.Element {
     return (
       <div className={css(this.style.content)}>
@@ -25,7 +29,7 @@ class Home extends React.Component<HomeProps, any> {
 
   /*------ Lifecycle ------*/
   componentDidMount() {
-    this.props.actions.onAppInit(this.callback)
+    this.props.actions.onAppInit(this.callback, this.props.sampleService)
   }
 
   /*------ Handler ------*/

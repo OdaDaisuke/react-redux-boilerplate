@@ -19,7 +19,7 @@ interface reqOption {
 }
 
 export class APIClient {
-  private static getReqOption(option: reqOpProps) {
+  private getReqOption(option: reqOpProps) {
     return {
       method: option.method,
       // url: configs.env.apiBaseUri + option.endpoint,
@@ -29,7 +29,7 @@ export class APIClient {
     }
   }
 
-  private static async _reqData(method: string, endpoint: string, postParams: any, callback: any) {
+  private async _reqData(method: string, endpoint: string, postParams: any, callback: any) {
     method = (method === 'POST') ? method : 'GET';
 
     let reqOption
@@ -62,15 +62,15 @@ export class APIClient {
       })
   }
 
-  private static postData(option: reqOption) {
+  private postData(option: reqOption) {
     this._reqData('POST', option.endpoint, option.params, option.callback)
   }
 
-  private static getData(option: reqOption) {
+  private getData(option: reqOption) {
     this._reqData('GET', option.endpoint, option.params, option.callback)
   }
 
-  static getSampleData(callback: any) {
+  getSampleData(callback: any) {
     const option = {
       endpoint: '/sample',
       callback: callback,

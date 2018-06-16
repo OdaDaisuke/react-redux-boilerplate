@@ -1,10 +1,7 @@
 import * as types from '../actionTypes'
 import { SampleService } from '../domain'
 
-const sampleService = new SampleService()
-
-export const onAppInit = (callback: any) => {
-  // YOUR ACTIONS
+export const onAppInit = (callback: any, sampleService: SampleService) => {
   sampleService.get(callback)
 
   return {

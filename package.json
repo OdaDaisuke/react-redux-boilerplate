@@ -7,9 +7,9 @@
     "clean:assets": "rm -rf public/assets/",
     "copy:assets": "cp -R assets/ public/assets/",
     "configure": "tsc webpack.config.ts",
-    "start": "npm run configure && npm run copy:assets && webpack -w",
-    "build:dev": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=development webpack",
-    "build:prod": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=production webpack"
+    "start": "npm run configure && npm run copy:assets && webpack -w --mode development",
+    "build:dev": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=development webpack --mode development",
+    "build:prod": "npm run configure && npm run clean:assets && npm run copy:assets && NODE_ENV=production webpack --mode production"
   },
   "dependencies": {
     "@types/react": "^16.0.40",

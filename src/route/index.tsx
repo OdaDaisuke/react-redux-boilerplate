@@ -2,6 +2,10 @@ import * as React from 'react'
 import *  as ReactDOM from 'react-dom'
 import { Route, Switch } from 'react-router'
 import { Router } from 'react-router-dom'
+import { DomainFactory } from '../domain'
+import { PageFactory } from '../view/pages/factory'
+
+/* pages */
 import { Header } from '../view/molecules/header'
 import Home from '../view/pages/home'
 import { NotFound } from '../view/pages/not_found'
@@ -11,14 +15,24 @@ export interface AppRouteProps {
 }
 
 export class AppRoute extends React.Component<AppRouteProps, any> {
+  private df: DomainFactory
+  private pf: PageFactory
+
+  constructor(props: AppRouteProps) {
+    super(props)
+    this.df = new DomainFactory()
+    this.pf = new PageFactory(this.df)
+  }
+
   render(): JSX.Element {
+
     return (
       <Router history={this.props.history}>
         <div>
           <Header />
           <Switch>
-            <Route path="/" component={Home} />
-            <Route path="*" component={NotFound} />
+            <Route path="/" exact component={this.pf.Home} />
+            <Route path="*" component={this.pf.NotFound} />
           </Switch>
         </div>
       </Router>
