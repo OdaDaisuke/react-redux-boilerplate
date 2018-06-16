@@ -16,9 +16,9 @@ class Home extends React.Component<HomeProps, any> {
     return (
       <div className={css(this.style.content)}>
 	<div className={css(this.style.block)}>
-	  <Sentence label={this.props.state.appState} />
+	  <Sentence>{this.props.state.appState}</Sentence>
 	</div>
-	<Button label="ボタンコンポーネント" onClick={this.handleClick} />
+	<Button onClick={this.handleClick}>ボタンコンポーネント</Button>
       </div>
     )
   }
