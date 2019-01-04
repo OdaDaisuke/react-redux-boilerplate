@@ -12,8 +12,8 @@ export class Button extends React.Component<IButtonProps, any> {
     render(): JSX.Element {
         return (
             <button
-	      className={css(this.style.button)}
-	      onClick={this.onClick}
+                className={css(this.style.button)}
+                onClick={this.onClick}
             >
                 {this.props.children}
             </button>

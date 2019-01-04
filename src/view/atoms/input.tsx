@@ -23,15 +23,15 @@ export class Input extends React.Component<IinputProps, any> {
   get style() {
     return StyleSheet.create({
       input: {
-	cursor: 'pointer',
-	outline: 'none',
-	paddingTop: '5px',
-	paddingRight: '12px',
-	paddingBottom: '5px',
-	paddingLeft: '12px',
-	':focus': {
-	  cursor: 'text',
-	},
+      cursor: 'pointer',
+      outline: 'none',
+      paddingTop: '5px',
+      paddingRight: '12px',
+      paddingBottom: '5px',
+      paddingLeft: '12px',
+      ':focus': {
+        cursor: 'text',
+      },
       },
     })
   }

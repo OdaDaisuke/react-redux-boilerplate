@@ -15,7 +15,7 @@ export class PageFactory {
   Home(): JSX.Element {
     return (
       <Home
-	sampleService={this.domainFactory.sampleService}
+      	sampleService={this.domainFactory.sampleService}
       />
     )
   }

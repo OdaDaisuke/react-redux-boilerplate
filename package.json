@@ -1,9 +1,10 @@
 {
   "name": "react-redux-boilerplate",
   "version": "0.1.0",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "exit 0",
+    "test": "jest",
     "clean:assets": "rm -rf public/assets/",
     "copy:assets": "cp -R assets/ public/assets/",
     "configure": "tsc webpack.config.ts",
@@ -33,12 +34,15 @@
     "webpack-dev-server": "^3.1.1"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.11",
     "@types/react-redux": "^6.0.0",
     "@types/react-router-redux": "^5.0.14",
     "@types/redux": "^3.6.0",
     "bind-decorator": "^1.0.11",
     "dotenv-webpack": "^1.5.5",
+    "jest": "^23.6.0",
     "react-hot-loader": "^4.0.0",
-    "react-router-redux": "^4.0.8"
+    "react-router-redux": "^4.0.8",
+    "ts-jest": "^23.10.5"
   }
 }

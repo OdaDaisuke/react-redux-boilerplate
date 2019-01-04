@@ -1,5 +1,4 @@
 import * as React from 'react'
-import *  as ReactDOM from 'react-dom'
 import { Route, Switch } from 'react-router'
 import { Router } from 'react-router-dom'
 import { DomainFactory } from '../domain'
@@ -7,8 +6,6 @@ import { PageFactory } from '../view/pages/factory'
 
 /* pages */
 import { Header } from '../view/molecules/header'
-import Home from '../view/pages/home'
-import { NotFound } from '../view/pages/not_found'
 
 export interface AppRouteProps {
   history: any
