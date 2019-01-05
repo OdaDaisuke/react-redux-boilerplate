@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer Pass the ON_APP_INIT 1`] = `
+Object {
+  "appState": "Ready.",
+}
+`;

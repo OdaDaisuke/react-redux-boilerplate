@@ -7,6 +7,7 @@ describe("Reducer", () => {
     test("Pass the ON_APP_INIT", () => {
         const action: IAction = { type: types.ON_APP_INIT }
         const state: InitialStateInterface = mainReducer(initialState, action)
-        expect(state.appState).toBe("Ready.")
+        // expect(state).toMatchObject({ appState: "Ready." })
+        expect(state).toMatchSnapshot()
     })
 })
