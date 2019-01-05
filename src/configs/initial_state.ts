@@ -1,9 +1,9 @@
-export interface InitialStateInterface {
+export interface IInitialState {
   appState: string
   count: number
 }
 
-export const initialState: InitialStateInterface = {
+export const initialState: IInitialState = {
   appState: "",
   count: 0,
 }
