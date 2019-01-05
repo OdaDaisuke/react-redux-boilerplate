@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Reducer Pass the ON_APP_INIT 1`] = `
-Object {
-  "appState": "Ready.",
-}
+exports[`DEC_COUNT 1`] = `
+Snapshot Diff:
+Compared values have no visual difference.
+`;
+
+exports[`INC_COUNT 1`] = `
+Snapshot Diff:
+Compared values have no visual difference.
+`;
+
+exports[`ON_APP_INIT 1`] = `
+Snapshot Diff:
+- Before
++ After
+
+  Object {
+-   "appState": "",
++   "appState": "Ready.",
+    "count": 0,
+  }
+`;
+
+exports[`handle initial state 1`] = `
+Snapshot Diff:
+Compared values have no visual difference.
 `;
